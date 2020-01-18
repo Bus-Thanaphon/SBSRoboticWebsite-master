@@ -1,0 +1,130 @@
+﻿@model Robotic.Core.Models.Product
+
+@{
+    ViewBag.Title = "Details";
+}
+
+    <center>
+        <div class="jumbotron" style="background-color:#FFFFFF">
+            <a href='@Url.Action("Index", "Home", new { area = "" })'>
+                <img src="~/Content/Images/SmartBusinessSolutions_Logo_1x.png" />
+            </a>
+        </div>
+    </center>
+<h2>ข้อมูลเพิ่มเติม</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CreateAt)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreateAt)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.No)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.No)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PurchaseID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PurchaseID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Category)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Category)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Color_Principle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Color_Principle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Grain)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Grain)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Thickness)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Thickness)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Quantity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Quantity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Dimention_Weight)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Dimention_Weight)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Dimention_Height)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Dimention_Height)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Note)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Note)
+        </dd>
+
+    </dl>
+    <center>
+        @Html.ActionLink("กลับ", "Index", null, new { @type = "submit", @class = "btn btn-default" })
+    </center>
+</div>
+<p>
+    
+</p>

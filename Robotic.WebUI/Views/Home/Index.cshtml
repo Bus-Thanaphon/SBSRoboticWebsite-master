@@ -1,0 +1,17 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+    <center>
+        <div class="jumbotron" style="background-color:#FFFFFF">
+            <a href='@Url.Action("Index", "Home", new { area = "" })'>
+                <img src="~/Content/Images/SmartBusinessSolutions_Logo_1x.png" />
+            </a>
+        </div>
+    </center>
+<center>
+    <div>
+        @Html.ActionLink("รายการไม้/สั่งผลิต", "Index", "ProductManager", null, new { @class = "btn btn-primary btn-large", @style = "text-align:center" })
+        @Html.ActionLink("เพิ่มชนิดไม้", "Index", "ProductManager/Create", null, new { @class = "btn btn-primary btn-large" })
+    </div>
+</center>

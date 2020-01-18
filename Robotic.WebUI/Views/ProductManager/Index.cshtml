@@ -1,0 +1,145 @@
+﻿@model IEnumerable<Robotic.Core.Models.Product>
+
+@{
+    ViewBag.Title = "Index";
+}
+<center>
+    <div class="jumbotron" style="background-color:#FFFFFF">
+        <a href='@Url.Action("Index", "Home", new { area = "" })'>
+            <img src="~/Content/Images/SmartBusinessSolutions_Logo_1x.png" />
+        </a>
+    </div>
+</center>
+<h2>รายการไม้</h2>
+
+<p>
+    @Html.ActionLink("เพิ่มชนิดไม้", "Create")
+</p>
+<table class="table" @*border="1"*@ width="100%">
+    <tr>
+        @*<th>
+            @Html.DisplayNameFor(model => model.CreateAt)
+        </th>*@
+
+        <th class="text-center">
+            @Html.DisplayNameFor(model => model.No)
+        </th>
+
+        <th class="text-center">
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+
+        <th class="text-center">
+            @Html.DisplayNameFor(model => model.PurchaseID)
+        </th>
+
+        @*<th>
+            @Html.DisplayNameFor(model => model.Category)
+        </th>*@
+        <th class="text-center">
+            @Html.DisplayNameFor(model => model.Color_Principle)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.Grain)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Thickness)
+        </th>*@
+        <th class="text-center">
+            @Html.DisplayNameFor(model => model.Quantity)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Dimention_Weight)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Note)
+        </th>*@
+        <th class="text-center" width="6%">
+            ข้อมูลเพิ่มเติม
+        </th>
+        <th class="text-center" width="6%">
+            แก้ไขรายละเอียด
+        </th>
+        <th class="text-center" width="6%">
+            ใช้ไม้ผลิต
+        </th>
+        <th class="text-center" width="6%">
+            เพิ่มจำนวน
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr align = "center">
+        @*<td>
+            @Html.DisplayFor(modelItem => item.CreateAt)
+        </td>*@
+        <td align = "center">
+            @Html.DisplayFor(modelItem => item.No)
+        </td>
+
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+
+        <td>
+            @Html.DisplayFor(modelItem => item.PurchaseID)
+        </td>
+        
+        @*<td>
+            @Html.DisplayFor(modelItem => item.Category)
+        </td>*@
+        <td>
+            @Html.DisplayFor(modelItem => item.Color_Principle)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.Grain)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Thickness)
+        </td>*@
+        <td>
+            @Html.DisplayFor(modelItem => item.Quantity)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Dimention_Weight)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Note)
+        </td>*@
+        <td>
+            @*@Html.ActionLink("Details", "Details", new { id=item.Id })*@
+            <a href="@Url.Action("Details", new { id=item.Id })" title="Details" class="links">
+            <img src="@Url.Content("~/Content/Images/Icons/eye.png")" width="25" height="25">
+            </a>
+        </td>
+        <td>
+            @*@Html.ActionLink("Edit", "Edit", new { id = item.Id })*@
+            <a href="@Url.Action("Edit", new { id=item.Id })" title="Edit" class="links">
+                <img src="@Url.Content("~/Content/Images/Icons/pen.png")" width="25" height="25">
+            </a>
+        </td>
+        <td>
+            @*@Html.ActionLink("Use", "UseProduct", new { id = item.Id })*@
+            <a href="@Url.Action("UseProduct", new { id=item.Id })" title="Use" class="links">
+                <img src="@Url.Content("~/Content/Images/Icons/tv.png")" width="25" height="25">
+            </a>
+        </td>
+        <td>
+            @*@Html.ActionLink("Add", "AddQuantity", new { id = item.Id })*@
+            <a href="@Url.Action("AddQuantity", new { id=item.Id })" title="Details" class="links">
+                <img src="@Url.Content("~/Content/Images/Icons/plus.png")" width="25" height="25">
+            </a>
+        </td>
+        <td>
+            @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+        </td>
+    </tr>
+}
+
+</table>
