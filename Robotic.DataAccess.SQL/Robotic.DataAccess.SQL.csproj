@@ -54,9 +54,9 @@
     <Compile Include="Migrations\202001110308129_Initial.Designer.cs">
       <DependentUpon>202001110308129_Initial.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202001180124013_SBSU.cs" />
-    <Compile Include="Migrations\202001180124013_SBSU.Designer.cs">
-      <DependentUpon>202001180124013_SBSU.cs</DependentUpon>
+    <Compile Include="Migrations\202001180910345_SBSU.cs" />
+    <Compile Include="Migrations\202001180910345_SBSU.Designer.cs">
+      <DependentUpon>202001180910345_SBSU.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -76,8 +76,8 @@
     <EmbeddedResource Include="Migrations\202001110308129_Initial.resx">
       <DependentUpon>202001110308129_Initial.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202001180124013_SBSU.resx">
-      <DependentUpon>202001180124013_SBSU.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202001180910345_SBSU.resx">
+      <DependentUpon>202001180910345_SBSU.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

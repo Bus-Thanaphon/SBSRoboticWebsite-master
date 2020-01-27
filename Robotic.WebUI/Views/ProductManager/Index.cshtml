@@ -76,7 +76,7 @@
         @*<td>
             @Html.DisplayFor(modelItem => item.CreateAt)
         </td>*@
-        <td align = "center">
+        <td>
             @Html.DisplayFor(modelItem => item.No)
         </td>
 
@@ -136,9 +136,9 @@
                 <img src="@Url.Content("~/Content/Images/Icons/plus.png")" width="25" height="25">
             </a>
         </td>
-        <td>
+        @*<td>
             @Html.ActionLink("Delete", "Delete", new { id = item.Id })
-        </td>
+        </td>*@                   
     </tr>
 }
 

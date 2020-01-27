@@ -32,7 +32,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.No, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.No , new { htmlAttributes = new { @class = "form-control"} })
+                @Html.EditorFor(model => model.No , new { htmlAttributes = new { @class = "form-control", @readonly = "readonly"} })
                 @Html.ValidationMessageFor(model => model.No, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -132,7 +132,26 @@
 
         <div class="form-group">
             <div align="center">
-                <input type="submit" value="เพิ่ม" class="btn btn-default" />
+                @*<input type="submit" value="เพิ่ม" class="btn btn-default" />*@
+                <a class="btn btn-default" data-toggle="modal" data-target=".bootstrapmodal">เพิ่ม</a>
+                <div class="modal fade bootstrapmodal">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-heaader">
+                                <button data-dismiss="modal" class="close"><span>&times;</span></button>
+                                <div class="modal-title">SBS</div>
+                            </div>
+                            <div class="modal-body">
+                                <p>ยืนยันการสร้าง?</p>
+                            </div>
+                            <div class="modal-footer">
+                                <input type="submit" value="ใช้ไม้" class="btn btn-default" />
+                                <button class="btn btn-default" data-dismiss="modal" id="btnCancel">ยกเลิก</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
                 @Html.ActionLink("ยกเลิก", "Index", null, new { @type = "submit", @class = "btn btn-default" })
             </div>
             

@@ -7,12 +7,12 @@ namespace Robotic.DataAccess.SQL.Migrations
     {
         public override void Up()
         {
-            AlterColumn("dbo.Products", "No", c => c.String());
+            DropColumn("dbo.Products", "UNo");
         }
         
         public override void Down()
         {
-            AlterColumn("dbo.Products", "No", c => c.Int(nullable: false));
+            AddColumn("dbo.Products", "UNo", c => c.String());
         }
     }
 }

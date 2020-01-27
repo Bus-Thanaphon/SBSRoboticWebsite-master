@@ -13,7 +13,7 @@ namespace Robotic.DataAccess.SQL.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "202001180124013_SBSU"; }
+            get { return "202001180910345_SBSU"; }
         }
         
         string IMigrationMetadata.Source

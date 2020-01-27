@@ -26,9 +26,23 @@ namespace Robotic.WecUI.Controllers
         }
 
 
-        public ActionResult Create()
+        public ActionResult Create( int no = 0)
         {
             Product product = new Product();
+            var lastNo = context.Collection().OrderByDescending(c => c.No).FirstOrDefault();
+            if (no != 0)
+            {
+                product = context.Collection().Where(x => x.No == no).FirstOrDefault<Product>();
+            }
+            else if (lastNo == null)
+            {
+                product.No = 1;
+            }
+            else
+            {
+                product.No = lastNo.No + 1;
+                //product.UNo = "ID" + (lastNo.No + 1).ToString();
+            }
             return View(product);
         }
 

@@ -14,7 +14,9 @@ namespace Robotic.Core.Models
         //[Key]
         //[DatabaseGeneratedAttribute(DatabaseGeneratedOption.Identity)]
         [DisplayName("ลำดับที่")]
-        public string No { get; set; }
+        public int No { get; set; }
+        
+        //public string UNo { get; set; }
 
         [Required(ErrorMessage = "โปรดกรอกรหัสไม้")]
         [StringLength(30, ErrorMessage = "ไม่สามารถกรอกได้เกิน 30 ตัวอักษร")]
@@ -61,9 +63,9 @@ namespace Robotic.Core.Models
         [DisplayName("โน๊ต")]
         public string Note { get; set; }
 
-        public Product()
-        {
-            this.No = Guid.NewGuid().ToString();
-        }
+        //public Product()
+        //{
+        //    this.No = Guid.NewGuid().ToString();
+        //}
     }
 }
